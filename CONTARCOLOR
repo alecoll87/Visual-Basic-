@@ -1,0 +1,18 @@
+Function CONTARCOLOR(celdaOrigen As Range, rango As Range)
+    
+    Application.Volatile
+    
+    'Variables
+    Dim celda As Range
+             
+    'Recorremos todas las celdas del rango
+    For Each celda In rango
+        
+        'Compara la propiedad Interior.Color
+        If celda.Interior.Color = celdaOrigen.Interior.Color Then
+            CONTARCOLOR = CONTARCOLOR + 1
+        End If
+        
+    Next celda
+
+End Function
