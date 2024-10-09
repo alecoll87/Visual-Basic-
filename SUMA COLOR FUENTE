@@ -1,0 +1,10 @@
+Function Sumarcolorfuente(colorfuente As Range, rango As Range)
+
+Dim dep, celdaref As Range
+For Each celda In rango
+    If celda.Font.ColorIndex = colorfuente.Font.ColorIndex Then
+        dep = dep + celda.Value
+End If
+Next celda
+Sumarcolorfuente = dep
+End Function
